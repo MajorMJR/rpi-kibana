@@ -6,4 +6,4 @@ To build the container:
 docker build -t rpi-kibana .
 
 To run the container:
-docker run -d -p 5601:5601 -p 5043:5043 rpi-kibana
+docker run -d -p 5601:5601 -e ELASTICSEARCH=IP:PORT rpi-kibana
