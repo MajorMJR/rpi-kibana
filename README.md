@@ -1,9 +1,9 @@
-## RPI-ANSIBLE
+## RPI-KIBANA
 
-# A docker container for the Raspberry Pi to install the latest version of Docker
+# Docker container to install Kibana on the Raspberry Pi
 
 To build the container:
-docker build -t rpi-ansible .
+docker build -t rpi-kibana .
 
 To run the container:
-docker run -t -i -v /var/ansible:/ansible/manifest rpi-ansible
+docker run -d -p 5601:5601 -p 5043:5043 rpi-kibana

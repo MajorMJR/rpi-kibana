@@ -12,9 +12,7 @@ ENV KIBANA_CONFIG /elk/kibana/config/kibana.yml
 WORKDIR /elk
 
 # Download 
-RUN wget https://download.elastic.co/logstash/logstash/packages/debian/logstash_2.0.0-1_all.deb 
 RUN wget https://download.elastic.co/kibana/kibana/kibana-4.1.0-linux-x64.tar.gz
-RUN dpkg -i logstash_2.0.0-1_all.deb
 RUN tar -xzvf kibana-4.1.0-linux-x64.tar.gz
 RUN mv kibana-4.1.0-linux-x64 kibana
 
